@@ -3,6 +3,8 @@
 **MixTrackr** is a lightweight, privacy-first web app for DJs to view and export their **Native Instruments Traktor** history files.  
 It runs entirely **in your browser** — no tracking, no servers, and no data collection.
 
+🌐 **Live Demo:** [https://mixtrackr.stroobie.com](https://mixtrackr.stroobie.com)
+
 ---
 
 ## ✨ Features
