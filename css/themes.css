@@ -1,0 +1,530 @@
+/* ===================================================
+   MixTrackr Themes
+   Apply via: <html data-theme="default|chuck|doggo">
+   =================================================== */
+
+/* DEFAULT  Classic Traktor dark look */
+html[data-theme="default"] {
+  --bg:#0d0f12;
+  --panel:#12161c;
+  --panel-2:#171c23;
+  --text:#e7ecef;
+  --muted:#9aa6b2;
+  --accent:#ff6a00;
+  --accent-2:#37e5ff;
+  --line:#222a33;
+  --ok:#57d156;
+  --warn:#ffb020;
+}
+
+/* CHUCK  Neon Magenta & Green hybrid (loud + slick) */
+html[data-theme="chuck"] {
+  --panel:#0f0016;            /* deep violet base */
+  --panel-2:#190022;          /* slightly lighter cards */
+  --text:#eaffea;             /* pale green-white */
+  --muted:#b699b6;            /* desaturated lavender */
+  --accent:#ff00c8;           /* neon magenta */
+  --accent-2:#39ff14;         /* neon green */
+  --line:#2a003b;
+  --ok:#39ff14;
+  --warn:#ffb3ff;
+}
+html[data-theme="chuck"] body {
+  background:linear-gradient(180deg,#0a0010 0%, #14001c 60%, #0a0010 100%);
+}
+html[data-theme="chuck"] header {
+  background:rgba(25,0,35,.9);
+  border-bottom:1px solid var(--line);
+}
+html[data-theme="chuck"] header h1 { color:var(--accent-2); }
+html[data-theme="chuck"] header h1 span { color:var(--accent); }
+
+html[data-theme="chuck"] .btn {
+  background:linear-gradient(180deg,#180022,#0c0015);
+  color:var(--text);
+  border:1px solid var(--line);
+}
+html[data-theme="chuck"] .btn:hover { border-color:#ff00c8; }
+html[data-theme="chuck"] .btn.accent {
+  background:linear-gradient(180deg,var(--accent),#a60086);
+  border-color:var(--accent);
+  color:#fff;
+}
+html[data-theme="chuck"] .btn.ghost {
+  background:transparent;
+  color:var(--accent-2);
+}
+html[data-theme="chuck"] .date-item:hover {
+  background:#15001f;
+  border-color:#39004f;
+}
+html[data-theme="chuck"] .date-item.active {
+  background:linear-gradient(180deg,#180022,#0e0015);
+  border-color:#ff00c8;
+}
+html[data-theme="chuck"] .idx {
+  background:#120019;
+  color:var(--accent);
+  border-color:#300038;
+}
+html[data-theme="chuck"] .search {
+  background:var(--panel-2);
+  color:var(--text);
+  border:1px solid var(--line);
+}
+html[data-theme="chuck"] .marquee {
+  background:linear-gradient(180deg,#1b0025,#120019);
+  color:var(--accent-2);
+  border-bottom:1px solid var(--line);
+}
+html[data-theme="chuck"] footer a { color:var(--accent-2); }
+
+/* 
+   Theme: Doggo (Cherry Blossom)
+   Palette: Pastel pinks & warm neutrals
+   Soft contrast, easy on the eyes
+ */
+[data-theme="doggo"] {
+  /* slightly deeper, less-bright pinks */
+  --bg:       #f6e9ef;   /* page bg */
+  --panel:    #f8ecf2;   /* cards, inputs */
+  --panel-2:  #f4e3ea;   /* sidebar */
+  --text:     #5a2d3e;   /* warm plum for good contrast */
+  --muted:    #8a6277;   /* desaturated mauve */
+  --accent:   #ff9fc6;   /* soft blossom pink */
+  --accent-2: #ff4f9a;   /* stronger cherry highlight */
+  --line:     #e7cdd8;   /* light rose divider */
+  --ok:       #7cc98a;   /* minty success */
+  --warn:     #ffae40;   /* warm amber */
+}
+
+/* Background + base text */
+[data-theme="doggo"] body {
+  background: linear-gradient(180deg, #f8edf3 0%, #f6e9ef 100%);
+  color: var(--text);
+}
+
+/* Header bar (less bright, better contrast) */
+[data-theme="doggo"] header {
+  background: linear-gradient(180deg, #f8edf3, #f4e3ea);
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="doggo"] header h1 { color: var(--text); }
+[data-theme="doggo"] header .brand-sub { color: var(--muted); }
+[data-theme="doggo"] header h1 span { color: var(--accent-2); }
+
+/*  Doggo-only blossom before title */
+[data-theme="doggo"] header h1::before {
+  content: " ";
+  font-size: 1.1em;
+  margin-right: 4px;
+  vertical-align: -1px;
+}
+
+/* Sidebar + inputs */
+[data-theme="doggo"] .sidebar {
+  background: var(--panel-2);
+  border-right: 1px solid var(--line);
+}
+
+[data-theme="doggo"] .side-top {
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+
+[data-theme="doggo"] .search {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+
+[data-theme="doggo"] .hint { color: var(--muted); }
+
+[data-theme="doggo"] .hint code.small {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+/* Dropzone */
+[data-theme="doggo"] .dropzone {
+  background: var(--panel);
+  border: 1px dashed var(--line);
+  color: var(--muted);
+}
+
+[data-theme="doggo"] .dropzone.drag {
+  border-color: var(--accent-2);
+  background: rgba(255, 159, 198, 0.12);
+  color: var(--text);
+}
+
+/* Cards */
+[data-theme="doggo"] .card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 12px rgba(160, 60, 100, 0.08);
+  color: var(--text);
+}
+
+/* Buttons */
+[data-theme="doggo"] .btn {
+  background: linear-gradient(180deg, #fbe6ef, #f6dbe6);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+[data-theme="doggo"] .btn:hover {
+  background: linear-gradient(180deg, #f9dbe8, #f3d2e1);
+  border-color: var(--accent);
+}
+
+[data-theme="doggo"] .btn.accent {
+  background: linear-gradient(180deg, #ff9fc6, #ff4f9a);
+  color: #fff;
+  border: 1px solid var(--accent-2);
+}
+
+[data-theme="doggo"] .btn.accent:hover {
+  background: linear-gradient(180deg, #ff8cb9, #ff458f);
+}
+
+/* File list items */
+[data-theme="doggo"] .date-item {
+  background: var(--panel);
+  border: 1px solid transparent;
+  color: var(--text);
+}
+
+[data-theme="doggo"] .date-item:hover {
+  background: #ffd4e6;
+  color: #4a2132; /* stays readable on hover */
+  border-color: var(--accent-2);
+}
+
+/* Track list */
+[data-theme="doggo"] .tracks li { border-bottom: 1px dashed var(--line); }
+
+[data-theme="doggo"] .idx {
+  background: #ffe4f0;
+  color: var(--accent-2);
+  border: 1px solid #ffcade;
+}
+
+/* Marquee */
+[data-theme="doggo"] .marquee {
+  background: linear-gradient(180deg, #f9e3ee, #f6dbe7);
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Footer */
+[data-theme="doggo"] footer {
+  background: linear-gradient(180deg, #f8edf3, #f4e3ea);
+  color: var(--text);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -1px 4px rgba(160, 60, 100, 0.08);
+}
+
+[data-theme="doggo"] footer a { color: var(--accent-2); }
+[data-theme="doggo"] footer a:hover { text-decoration: underline; }
+
+/* Ensure other themes don't get the blossom */
+header h1::before { content: ""; }
+
+/* 
+   Theme: FamJam (Neon Blue & Magenta)
+   Palette: deep night + electric blue + hot magenta
+ */
+[data-theme="famjam"] {
+  --bg:       #0a0c12;   /* near-black base */
+  --panel:    #0f1420;   /* card/input surface */
+  --panel-2:  #0b101a;   /* sidebar */
+  --text:     #e8eef9;   /* soft ice-white for readability */
+  --muted:    #94a6c7;   /* grey-blue secondary */
+  --accent:   #ff3b8d;   /* neon magenta */
+  --accent-2: #4db3ff;   /* electric blue */
+  --line:     #1a2332;   /* subtle divider */
+  --ok:       #3fe1b0;   /* mint-aqua success */
+  --warn:     #ffb347;   /* warm amber warning */
+}
+
+/* Background + base text */
+[data-theme="famjam"] body {
+  background:
+    radial-gradient(1200px 500px at 80% 10%, rgba(77,179,255,0.08), transparent 60%),
+    radial-gradient(900px 400px at 10% 70%, rgba(255,59,141,0.06), transparent 60%),
+    linear-gradient(180deg, #0b0f16 0%, #0a0c12 100%);
+  color: var(--text);
+}
+
+/* Header */
+[data-theme="famjam"] header {
+  background: linear-gradient(180deg, #0f1521, #0c111a);
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  backdrop-filter: blur(8px);
+}
+[data-theme="famjam"] header h1 span { color: var(--accent-2); }
+[data-theme="famjam"] header .brand-sub { color: var(--muted); }
+
+/* Sidebar */
+[data-theme="famjam"] .sidebar {
+  background: var(--panel-2);
+  border-right: 1px solid var(--line);
+}
+[data-theme="famjam"] .side-top {
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+[data-theme="famjam"] .search {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+
+/* Hints & code chips */
+[data-theme="famjam"] .hint { color: var(--muted); }
+[data-theme="famjam"] .hint code.small {
+  background: #0e1522;
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+/* Dropzone */
+[data-theme="famjam"] .dropzone {
+  background: var(--panel);
+  border: 1px dashed var(--line);
+  color: var(--muted);
+}
+[data-theme="famjam"] .dropzone.drag {
+  border-color: var(--accent-2);
+  background: rgba(77,179,255,0.08);
+  color: var(--text);
+}
+
+/* Cards */
+[data-theme="famjam"] .card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35), 0 0 0 1px rgba(77,179,255,0.06) inset;
+  color: var(--text);
+}
+
+/* Buttons */
+[data-theme="famjam"] .btn {
+  background: linear-gradient(180deg, #121a2a, #0e1624);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+[data-theme="famjam"] .btn:hover {
+  border-color: #274061;
+  transform: translateY(-1px);
+}
+[data-theme="famjam"] .btn.accent {
+  background: linear-gradient(180deg, #ff3b8d, #c4236b);
+  color: #fff;
+  border: 1px solid #ff3b8d;
+  box-shadow: 0 0 18px rgba(255,59,141,0.25);
+}
+[data-theme="famjam"] .btn.accent:hover {
+  background: linear-gradient(180deg, #ff4ea0, #d32875);
+}
+[data-theme="famjam"] .btn.ghost { background: transparent; }
+
+/* File list items */
+[data-theme="famjam"] .date-item {
+  background: var(--panel);
+  border: 1px solid transparent;
+  color: var(--text);
+}
+[data-theme="famjam"] .date-item:hover {
+  background: #131c2e;
+  border-color: var(--accent-2);
+}
+
+/* Tracks */
+[data-theme="famjam"] .tracks li { border-bottom: 1px dashed var(--line); }
+[data-theme="famjam"] .idx {
+  background: #0e1c30;
+  color: var(--accent-2);
+  border: 1px solid #214062;
+}
+
+/* Marquee */
+[data-theme="famjam"] .marquee {
+  background: linear-gradient(180deg, #11192a, #0d1422);
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 1px 0 rgba(77,179,255,0.08) inset;
+}
+
+/* Footer */
+[data-theme="famjam"] footer {
+  background: linear-gradient(180deg, #0f1626, #0b121e);
+  color: var(--text);
+  border-top: 1px solid var(--line);
+}
+[data-theme="famjam"] footer a { color: var(--accent-2); }
+[data-theme="famjam"] footer a:hover { color: #79c7ff; text-decoration: underline; }
+
+/* 
+   Theme: Keno (Dark Cyberpunk  Glitch Cyan / Magenta)
+   Distinct from FamJam: deeper navy base, hotter magenta, cooler cyan,
+   diagonal glow accents, tighter contrast.
+ */
+[data-theme="keno"] {
+  /* Core palette */
+  --bg:       #05070d;   /* deeper than FamJam */
+  --panel:    #0a0f1b;
+  --panel-2:  #0d1222;
+  --text:     #e2e8f6;   /* soft ice white */
+  --muted:    #7f93b8;   /* steel blue-grey */
+  --accent:   #ff2fa0;   /* hot magenta (stronger than FamJam) */
+  --accent-2: #29d8ff;   /* colder cyan (not aqua) */
+  --line:     #172235;
+  --ok:       #00f2a9;
+  --warn:     #ffb24d;
+}
+
+/* Background: deep navy + diagonal neon haze (very low opacity) */
+[data-theme="keno"] body {
+  background:
+    linear-gradient(125deg, rgba(255,47,160,.06) 0%, rgba(41,216,255,.04) 35%, transparent 36%) no-repeat,
+    radial-gradient(900px 500px at 85% 20%, rgba(41,216,255,.08), transparent 60%) no-repeat,
+    radial-gradient(800px 450px at 15% 80%, rgba(255,47,160,.07), transparent 60%) no-repeat,
+    linear-gradient(180deg, #070a12 0%, #05070d 100%);
+  color: var(--text);
+}
+
+/* Header: thin neon underline + cool cyan title, magenta brand mark */
+[data-theme="keno"] header {
+  background: linear-gradient(180deg, #0f1627, #0a0f1b);
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  box-shadow: 0 2px 0 rgba(41,216,255,.12) inset;
+  backdrop-filter: blur(10px);
+}
+[data-theme="keno"] header h1 { color: var(--accent-2); }
+[data-theme="keno"] header h1 span { color: var(--accent); }
+[data-theme="keno"] header .brand-sub { color: var(--muted); }
+
+/* Sidebar */
+[data-theme="keno"] .sidebar {
+  background: var(--panel-2);
+  border-right: 1px solid var(--line);
+}
+[data-theme="keno"] .side-top {
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+[data-theme="keno"] .search {
+  background: #0b1120;
+  border: 1px solid var(--line);
+  color: var(--text);
+  box-shadow: 0 0 0 1px rgba(41,216,255,.06) inset;
+}
+
+/* Hint chips */
+[data-theme="keno"] .hint { color: var(--muted); }
+[data-theme="keno"] .hint code.small {
+  background: #0e1628;
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+/* Dropzone */
+[data-theme="keno"] .dropzone {
+  background: var(--panel);
+  border: 1px dashed var(--line);
+  color: var(--muted);
+}
+[data-theme="keno"] .dropzone.drag {
+  border-color: var(--accent-2);
+  background: rgba(41,216,255,.10);
+  color: var(--text);
+}
+
+/* Cards: subtle inner neon */
+[data-theme="keno"] .card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.45),
+    0 0 0 1px rgba(41,216,255,.07) inset,
+    0 0 18px rgba(255,47,160,.045) inset;
+}
+
+/* Buttons: glitch magenta primary, cyan focus */
+[data-theme="keno"] .btn {
+  background: linear-gradient(180deg, #121a2c, #0d1526);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+[data-theme="keno"] .btn:hover {
+  border-color: var(--accent-2);
+  transform: translateY(-1px);
+}
+[data-theme="keno"] .btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(41,216,255,.45);
+}
+[data-theme="keno"] .btn.accent {
+  background: linear-gradient(180deg, var(--accent), #b01f75);
+  color: #fff;
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 22px rgba(255,47,160,.28);
+}
+[data-theme="keno"] .btn.accent:hover {
+  background: linear-gradient(180deg, #ff4fba, #b01f75);
+}
+[data-theme="keno"] .btn.ghost {
+  background: transparent;
+  color: var(--accent-2);
+  border-color: var(--line);
+}
+
+/* File list */
+[data-theme="keno"] .date-item {
+  background: var(--panel);
+  border: 1px solid transparent;
+  color: var(--text);
+}
+[data-theme="keno"] .date-item:hover {
+  background: #131b30;
+  border-color: var(--accent-2);
+}
+
+/* Tracks */
+[data-theme="keno"] .tracks li { border-bottom: 1px dashed var(--line); }
+[data-theme="keno"] .idx {
+  background: #111a2c;
+  color: var(--accent-2);
+  border: 1px solid #263147;
+}
+
+/* Marquee */
+[data-theme="keno"] .marquee {
+  background: linear-gradient(180deg, #101936, #0b1120);
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 1px 0 rgba(41,216,255,.10) inset;
+}
+
+/* Footer */
+[data-theme="keno"] footer {
+  background: linear-gradient(180deg, #0e1529, #0a0f1b);
+  color: var(--text);
+  border-top: 1px solid var(--line);
+}
+[data-theme="keno"] footer a { color: var(--accent-2); }
+[data-theme="keno"] footer a:hover { color: var(--accent); text-decoration: underline; }
+
+/* Text selection tint matches cyan */
+[data-theme="keno"] ::selection {
+  background: rgba(41,216,255,.28);
+  color: #fff;
+}

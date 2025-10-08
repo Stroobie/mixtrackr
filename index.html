@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" data-theme="default">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>mixtrackr 1.2  Traktor History Viewer</title>
+  <meta name="theme-color" content="#0d0f12" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/themes.css">
+</head>
+<body>
+<header>
+  <h1><span>mixtrackr</span>  Traktor History Viewer <span class="brand-sub"></span></h1>
+  <div class="controls">
+    <label class="btn">
+      Load Collection.nml
+      <input id="collection" type="file" accept=".nml" hidden />
+    </label>
+    <span id="collectionStatus" class="status">No collection loaded</span>
+    <label class="btn accent">
+      Load History Folder
+      <input id="folder" type="file" webkitdirectory multiple hidden />
+    </label>
+    <button id="exportTxt" class="btn ghost" disabled>Export TXT</button>
+    <button id="exportCsv" class="btn ghost" disabled>Export CSV</button>
+
+    <!-- Theme picker -->
+    <select id="themeSelect" class="theme-select" title="Theme">
+      <option value="default">Default</option>
+      <option value="chuck">Chuck (Magenta / Neon Green)</option>
+      <option value="doggo">Doggo (Neon Pink / White)</option>
+      <option value="famjam">FamJam (Neon Aqua / Magenta)</option>
+      <option value="keno">Keno (Glitch Cyan / Magenta)</option>
+    </select>
+  </div>
+</header>
+
+<div class="marquee" aria-live="polite">
+  <div class="marquee__inner">
+    Alpha version  No persistence at this time for files  It will revert on refresh! 
+    Thank you for checking this out! 
+  </div>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="side-top">
+      <input id="search" class="search" type="search" placeholder="Filter dates (e.g., 2025-10)" />
+      <div class="hint" style="margin-top:8px"> Tested on Chrome and Firefox! </div>
+     <!-- This section is WIP and is currently broken!! <div class="hint" style="margin-top:8px">
+        Tip: point to <code class="small">\Documents\Native Instruments\Traktor x.x\History</code>
+      </div>
+      <div id="dz" class="dropzone">Or drop <b>.nml</b> history files here</div>
+    </div> -->
+    <div id="filelist" class="filelist"></div>
+    <div id="filePager" class="pager"></div>    
+  </aside>
+
+  <main class="content">
+    <div id="welcome" class="card">
+      <h2>Welcome</h2>
+      <p class="sub">Load your Traktor <b>collection.nml</b> first, then your <b>History</b> folder. Click a date to see the tracklist.</p>
+      <ul>
+        <li>We resolve history <code>PRIMARYKEY</code> (e.g., <code>D:/:Hard Techno/:Track.mp3</code>) to Artist/Title via the collection.</li>
+        <li>Drag-and-drop of history <b>.nml</b> files is supported.</li>
+        <li>Use <b>Export</b> to save TXT/CSV of the current date.</li>
+      </ul>
+    </div>
+
+    <div id="details" class="card" style="display:none">
+      <h2 id="dateTitle">History</h2>
+      <p id="dateMeta" class="sub"></p>
+      <ol id="tracklist" class="tracks"></ol>
+      <div id="trackPager" class="pager"></div>
+      <div class="toolbar">
+        <button id="copyList" class="btn">Copy to Clipboard</button>
+        <span id="count" class="hint"></span>
+      </div>
+    </div>
+
+    <div id="empty" class="empty" style="display:none">No tracks parsed from this file.</div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <p>Created by <b>Stroobie</b>  Theme inspired by <b>Traktor</b>.</p>
+  <p>Runs entirely in your browser  no tracking, no data collection.</p>
+  <p>
+    <a href="https://stroobie.com" target="_blank" rel="noopener noreferrer">
+      Report bugs or request features on <b>stroobie.com</b>
+    </a>
+  </p>
+  <p>Licensed under the <a href="LICENSE" target="_blank" rel="noopener noreferrer"><b>MIT License</b></a>.</p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

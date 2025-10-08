@@ -1,0 +1,16 @@
+# OS / system
+.DS_Store
+Thumbs.db
+
+# Web cache / temp
+node_modules/
+*.log
+
+# Local web server / container config
+nginx.conf
+.env
+docker-compose.yml
+
+# Build / cache outputs
+dist/
+build/
